@@ -7,6 +7,7 @@ let isOn = false;
 switchContainer.addEventListener("click", () => {
   isOn = !isOn;
   const theme = isOn ? "light" : "dark";
+
   switchTheme(theme);
 
   if (isOn) {
@@ -23,14 +24,25 @@ switchContainer.addEventListener("click", () => {
 });
 
 function switchTheme(theme) {
-  document.querySelectorAll("div").forEach((element) => {
+  container.classList.remove(theme === "dark" ? "light" : "dark");
+  container.classList.add(theme);
+  
+  switchContainer.classList.remove(theme === "dark" ? "light" : "dark");
+  switchContainer.classList.add(theme);
+
+  document.querySelectorAll("#switch-btn").forEach((element) => {
     element.classList.remove(theme === "dark" ? "light" : "dark");
     element.classList.add(theme);
+
+    document.getElementById("theme-bg-content").classList.toggle("play");
   });
 }
 
-function addObjects(theme) {
-  if (theme === "dark") {
-    
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("theme-bg-content").classList.toggle("play");
+  }, 400);
+  setTimeout(() => {
+    switchContainer.classList.toggle("play");
+  }, 800);
+});
