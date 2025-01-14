@@ -47,8 +47,8 @@ body {
   &::after {
     background: linear-gradient(
       0deg,
-      rgba(229, 49, 231, 1) 11%,
-      rgba(32, 24, 110, 1) 87%
+      rgba(221, 57, 189, 1) 35%,
+      rgba(32, 78, 224, 1) 100%
     );
     opacity: 0;
   }
@@ -77,7 +77,7 @@ body {
   transition: 1s cubic-bezier(0.47, -0.01, 0.01, 1);
 
   &.light {
-    background-color: #f8ffe9;
+    background-color: #f5ffda;
   }
 
   &.dark {
@@ -96,7 +96,7 @@ body {
   height: 90px;
   width: 90px;
   border-radius: 100%;
-  transition: 280ms cubic-bezier(0.35, 0.01, 0.24, 1);
+  transition: 350ms cubic-bezier(0.35, 0.01, 0.24, 1);
 
   &.light {
     background-color: #ffbe0d;

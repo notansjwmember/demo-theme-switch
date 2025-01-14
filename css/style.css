@@ -37,7 +37,7 @@ body {
   opacity: 1;
 }
 #container::after {
-  background: linear-gradient(0deg, rgb(229, 49, 231) 11%, rgb(32, 24, 110) 87%);
+  background: linear-gradient(0deg, rgb(221, 57, 189) 35%, rgb(32, 78, 224) 100%);
   opacity: 0;
 }
 #container.dark::before {
@@ -60,7 +60,7 @@ body {
   transition: 1s cubic-bezier(0.47, -0.01, 0.01, 1);
 }
 #switch-container.light {
-  background-color: #f8ffe9;
+  background-color: #f5ffda;
 }
 #switch-container.dark {
   background-color: #def4ff;
@@ -76,7 +76,7 @@ body {
   height: 90px;
   width: 90px;
   border-radius: 100%;
-  transition: 280ms cubic-bezier(0.35, 0.01, 0.24, 1);
+  transition: 350ms cubic-bezier(0.35, 0.01, 0.24, 1);
 }
 #switch-btn.light {
   background-color: #ffbe0d;

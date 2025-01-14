@@ -5,103 +5,294 @@
   width: 100%;
   z-index: 3;
 
-  img:not(#bush1, #bush2) {
-    width: 100%;
-  }
-
   img {
     position: absolute;
   }
 
-  #cloud {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-image: url("/assets/background/dark/cloud.png");
-    background-size: contain;
-    mask-image: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0) 53%,
-      rgba(255, 255, 255, 1) 100%
-    );
-  }
+  .dark {
+    #cloud {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("/assets/background/dark/cloud.png");
+      background-size: contain;
+      mask-image: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 53%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
 
-  #mtn,
-  #treebg {
-    bottom: -60%;
-    transition: all 1.3s cubic-bezier(0.23, 0, 0.13, 1);
-  }
-
-  #hill3,
-  #hill2,
-  #hill1 {
-    bottom: -80%;
-    transition: all 1.3s cubic-bezier(0.23, 0, 0.13, 1);
-  }
-
-  #bush2,
-  #bush1 {
-    bottom: -50%;
-    transition: all 1.3s cubic-bezier(0.23, 0, 0.13, 1);
-  }
-
-  #cloud {
-    bottom: 5%;
-  }
-
-  #stars,
-  #cloud {
-    opacity: 0;
-    transition: all 1s cubic-bezier(0.23, 0, 0.13, 1);
-  }
-
-  #bush1 {
-    left: 56%;
-  }
-
-  #bush2 {
-    left: 80%;
-  }
-
-  &.play {
     #mtn,
-    #treebg,
+    #treebg {
+      bottom: -60%;
+      transition: all 1.4s cubic-bezier(0.23, 0, 0.13, 1);
+      width: 100%;
+    }
+
     #hill3,
     #hill2,
-    #hill1,
-    #bush1,
+    #hill1 {
+      bottom: -80%;
+      transition: all 1.2s cubic-bezier(0.23, 0, 0.13, 1);
+      width: 100%;
+    }
+
     #bush2,
+    #bush1 {
+      bottom: -50%;
+      transition: all 1s cubic-bezier(0.23, 0, 0.13, 1);
+    }
+
+    #cloud {
+      bottom: 5%;
+    }
+
     #stars,
     #cloud {
-      opacity: 1;
-    }
-
-    #mtn {
-      bottom: 25%;
-    }
-
-    #treebg {
-      bottom: 10%;
-    }
-
-    #hill3 {
-      bottom: -28%;
-    }
-
-    #hill2 {
-      bottom: -23%;
-    }
-
-    #hill1 {
-      bottom: -15%;
+      opacity: 0;
+      transition: all 1s cubic-bezier(0.23, 0, 0.13, 1);
+      width: 100%;
     }
 
     #bush1 {
-      bottom: 0;
+      width: 35%;
+      right: 14.5%;
     }
 
     #bush2 {
-      bottom: 0;
+      width: 25%;
+      right: 0;
+    }
+
+    &.play {
+      #mtn,
+      #treebg,
+      #hill3,
+      #hill2,
+      #hill1,
+      #bush1,
+      #bush2,
+      #stars,
+      #cloud {
+        opacity: 1;
+      }
+
+      #mtn {
+        bottom: 32%;
+      }
+
+      #treebg {
+        bottom: 18%;
+      }
+
+      #hill3 {
+        bottom: -18%;
+      }
+
+      #hill2 {
+        bottom: -19%;
+      }
+
+      #hill1 {
+        bottom: -15%;
+      }
+
+      #bush1 {
+        bottom: -1%;
+      }
+
+      #bush2 {
+        bottom: -1%;
+      }
+    }
+  }
+
+  .light {
+    #birds {
+      transition: all 2s cubic-bezier(0.23, 0, 0.13, 1);
+    }
+
+    #sun,
+    #sunray1,
+    #sunray2,
+    #clouds {
+      transition: all 1.4s cubic-bezier(0.23, 0, 0.13, 1);
+      transition-delay: 300ms;
+    }
+
+    #mtn1,
+    #mtn2,
+    #mtn3,
+    #mtn4,
+    #mtn5 {
+      transition: all 1.4s cubic-bezier(0.23, 0, 0.13, 1);
+    }
+
+    #spikes1,
+    #spikes2 {
+      transition: all 1.2s cubic-bezier(0.23, 0, 0.13, 1);
+    }
+
+    #spikes1 {
+      width: 100vw;
+      bottom: -80%;
+    }
+
+    #spikes2 {
+      width: 80vw;
+      bottom: -50%;
+    }
+
+    #mtn1 {
+      width: 90vw;
+      bottom: -100%;
+      right: -1%;
+    }
+
+    #mtn2 {
+      width: 70vw;
+      left: -5%;
+      bottom: -100%;
+    }
+
+    #mtn3 {
+      width: 70vw;
+      bottom: -100%;
+    }
+
+    #mtn4 {
+      width: 50vw;
+      right: -1%;
+      bottom: -100%;
+    }
+
+    #mtn5 {
+      width: 25vw;
+      right: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      bottom: -100%;
+    }
+
+    #birds {
+      opacity: 0;
+      width: 31vw;
+      right: 50%;
+      left: 56%;
+      transform: translate(-50%, -50%);
+      top: 24%;
+    }
+
+    #clouds {
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url("/assets/background/light/clouds.png");
+      background-size: contain;
+      mask-image: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 53%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    #sun {
+      opacity: 0;
+      width: 8vw;
+      top: 7%;
+      left: 7%;
+    }
+
+    #sunray1 {
+      opacity: 0;
+      width: 80vw;
+      top: -64%;
+      left: -27%;
+    }
+
+    #sunray2 {
+      width: 80vw;
+      bottom: -50%;
+      right: -110%;
+    }
+
+    &.play {
+      #spikes1 {
+        width: 100vw;
+        bottom: -5%;
+      }
+
+      #spikes2 {
+        width: 80vw;
+        bottom: -5%;
+      }
+
+      #mtn1 {
+        width: 90vw;
+        bottom: -4.7%;
+        right: -1%;
+      }
+
+      #mtn2 {
+        width: 70vw;
+        left: -5%;
+        bottom: 0;
+      }
+
+      #mtn3 {
+        width: 70vw;
+        bottom: 30%;
+      }
+
+      #mtn4 {
+        width: 50vw;
+        right: -1%;
+        bottom: 35%;
+      }
+
+      #mtn5 {
+        width: 25vw;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 37%;
+      }
+
+      #birds {
+        opacity: 1;
+        width: 25vw;
+        right: 50%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        top: 24%;
+      }
+
+      #clouds {
+        opacity: 1;
+      }
+
+      #sun {
+        opacity: 1;
+        width: 8vw;
+        top: 7%;
+        left: 7%;
+      }
+
+      #sunray1 {
+        opacity: 1;
+        width: 80vw;
+        top: -64%;
+        left: -27%;
+      }
+
+      #sunray2 {
+        opacity: 1;
+        width: 80vw;
+        bottom: -50%;
+        right: -60%;
+      }
     }
   }
 }
