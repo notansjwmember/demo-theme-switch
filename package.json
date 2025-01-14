@@ -1,0 +1,37 @@
+{
+  "name": "demo-theme-switch",
+  "version": "1.0.0",
+  "description": "Just for fun's sake",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon server.js\" \"npx sass assets/styles:css --watch\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notansjwmember/demo-theme-switch.git"
+  },
+  "keywords": [
+    "theme",
+    "switch",
+    "light-mode",
+    "dark-mode",
+    "animation",
+    "css",
+    "html",
+    "js",
+    "vanilla"
+  ],
+  "author": "Caenar Arteta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notansjwmember/demo-theme-switch/issues"
+  },
+  "homepage": "https://github.com/notansjwmember/demo-theme-switch#readme",
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "sass": "^1.83.4"
+  }
+}
